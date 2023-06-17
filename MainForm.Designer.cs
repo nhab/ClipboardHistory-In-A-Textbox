@@ -40,6 +40,8 @@ namespace ClipboardHistory
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnExportAll = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.TrayMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,9 +61,9 @@ namespace ClipboardHistory
             // 
             this.LayoutPanel.AutoScroll = true;
             this.LayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.LayoutPanel.Location = new System.Drawing.Point(12, 37);
+            this.LayoutPanel.Location = new System.Drawing.Point(12, 54);
             this.LayoutPanel.Name = "LayoutPanel";
-            this.LayoutPanel.Size = new System.Drawing.Size(776, 401);
+            this.LayoutPanel.Size = new System.Drawing.Size(776, 384);
             this.LayoutPanel.TabIndex = 1;
             this.LayoutPanel.WrapContents = false;
             // 
@@ -118,12 +120,34 @@ namespace ClipboardHistory
             this.label1.TabIndex = 2;
             this.label1.Text = "ClipboardHistory";
             // 
+            // btnExportAll
+            // 
+            this.btnExportAll.Location = new System.Drawing.Point(570, 25);
+            this.btnExportAll.Name = "btnExportAll";
+            this.btnExportAll.Size = new System.Drawing.Size(172, 23);
+            this.btnExportAll.TabIndex = 3;
+            this.btnExportAll.Text = "Export all to one clipboard Entry";
+            this.btnExportAll.UseVisualStyleBackColor = true;
+            this.btnExportAll.Click += new System.EventHandler(this.btnExportAll_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(474, 25);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnExportAll);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LayoutPanel);
             this.Controls.Add(this.CloseButton);
@@ -148,6 +172,8 @@ namespace ClipboardHistory
         private ContextMenuStrip TrayMenu;
         private ToolStripMenuItem showToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private Button btnExportAll;
+        private Button btnReset;
     }
 }
 

@@ -102,6 +102,22 @@ namespace ClipboardHistory
                 Focus();
             }
         }
+
+        private void btnExportAll_Click(object sender, EventArgs e)
+        {
+            string sAll = "";
+            foreach(Control  c in LayoutPanel.Controls)
+            {
+                sAll += c.Text+'\r'+'\n';
+            }
+            Clipboard.SetText(sAll);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            LayoutPanel.Controls.Clear();
+            Clipboard.Clear();
+        }
     }
 
     internal static class Extensions
